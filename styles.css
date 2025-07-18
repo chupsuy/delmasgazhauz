@@ -1,0 +1,356 @@
+:root {
+  --dark-blue: #40aaea; /* Primary Blue */
+  --red: #e7322f; /* Accent Red */
+  --orange: #fac01c; /* Primary Orange */
+  --light-orange: #fbd860; /* Lighter Orange for rings/accents */
+  --cream: #eae2b7; /* Kept as is, if needed for subtle backgrounds */
+  --bright-blue: #3399d4; /* Darker Blue for hover states */
+  --off-white: #f0f4f8; /* Background color, adjusted for palette */
+  --deep-blue-footer: #2a72b0; /* Derived deep blue for footer */
+  --light-orange-footer: #fccf4a; /* Derived light orange for footer accent */
+  --text-dark: #333; /* General text color */
+  --text-blue-heading: #2e82be; /* Darker blue for headings */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: 15px 40px;
+  }
+}
+
+header img {
+  height: 80px; /* Adjusted height for logo */
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 2px solid var(--border-blue-400);
+}
+
+@media (min-width: 768px) {
+  header img {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--bright-blue);
+  color: #e0f2fe; /* Lighter shade of blue for hover text */
+}
+
+nav li.dropdown {
+  position: relative;
+}
+
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--dark-blue);
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  nav .dropdown-menu {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+nav .dropdown-menu li a {
+  padding: 8px 15px;
+  display: block;
+  white-space: nowrap;
+  color: white;
+}
+
+nav .dropdown-menu li a:hover {
+  background-color: var(--bright-blue);
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.02); /* Slightly less aggressive scale on hover */
+}
+
+.product-list {
+  display: grid; /* Changed to grid for better control */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px; /* Add some horizontal padding */
+}
+
+.product {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 100%;
+  height: 180px; /* Fixed height for product images */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 1.8rem;
+  color: var(--text-blue-heading);
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1; /* Allow description to take available space */
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for forms */
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: var(--text-blue-heading);
+  font-size: 1.05rem;
+}
+
+input, select, textarea {
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--dark-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(64, 170, 234, 0.2); /* Focus ring effect */
+}
+
+button[type="submit"], .button-style {
+  background-color: var(--red);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover, .button-style:hover {
+  background-color: var(--hover-red); /* Using a derived hover color */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table styles for rates.html */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures rounded corners apply to content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: var(--blue-50);
+}
+
+footer {
+  background-color: var(--deep-blue-footer);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer span {
+  color: var(--light-orange-footer);
+}
+
+/* Specific styles for the dynamic product/order view */
+.min-h-\[600px\] {
+    min-height: 600px; /* Ensure enough space for transitions */
+}
+
+/* Adjusted for the new split-screen behavior on products.html */
+#allProductsView.section-hidden {
+    position: absolute;
+    width: 100%; /* Maintain width for transition */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    z-index: 1; /* Lower z-index when hidden */
+}
+
+#allProductsView.section-visible {
+    position: static; /* Back to normal flow */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 2; /* Higher z-index when visible */
+}
+
+#selectedProductView.section-hidden,
+#orderFormContainer.section-hidden {
+    position: absolute;
+    width: 100%; /* Important for transition */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    z-index: 1; /* Lower z-index when hidden */
+}
+
+#selectedProductView.section-visible,
+#orderFormContainer.section-visible {
+    position: static; /* Back to normal flow */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 2; /* Higher z-index when visible */
+}
+
+/* Ensure proper width distribution for lg screens when visible */
+@media (min-width: 1024px) {
+    #allProductsView.section-visible {
+        width: 100%; /* Full width when showing all products */
+    }
+    #selectedProductView.section-visible {
+        width: calc(66.666667% - 16px); /* 2/3 width minus gap */
+        margin-right: 16px; /* Half of the gap */
+    }
+    #orderFormContainer.section-visible {
+        width: calc(33.333333% - 16px); /* 1/3 width minus gap */
+        margin-left: 16px; /* Half of the gap */
+    }
+}

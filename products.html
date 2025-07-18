@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delma's Gaz Hauz | Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    /* Custom Color Palette based on your logo */
+    .bg-blue-700 { background-color: #40aaea; } /* Primary Blue */
+    .bg-blue-600 { background-color: #3399d4; } /* Darker Blue for hover */
+    .text-blue-700 { color: #40aaea; }
+    .text-blue-800 { color: #2e82be; } /* Darker Blue for headings */
+    .border-blue-400 { border-color: #6ed0ff; } /* Lighter Blue for accents */
+    .bg-orange-500 { background-color: #fac01c; } /* Primary Orange */
+    .hover\:bg-orange-600:hover { background-color: #e3ac19; } /* Darker Orange for hover */
+    .ring-orange-400 { --tw-ring-color: #fbd860; } /* Lighter Orange for rings */
+    .bg-red-600 { background-color: #e7322f; } /* Accent Red for buttons */
+    .hover\:bg-red-700:hover { background-color: #c92a28; } /* Darker Red for hover */
+    .ring-red-400 { --tw-ring-color: #f06a68; } /* Lighter Red for rings */
+    .bg-blue-900 { background-color: #2a72b0; } /* Deep Blue for footer (derived from primary blue) */
+    .text-orange-300 { color: #fccf4a; } /* Light Orange for footer accent (derived from primary orange) */
+    .bg-blue-50 { background-color: #eaf8ff; } /* Lightest Blue background (derived) */
+    .bg-orange-50 { background-color: #fff8e0; } /* Lightest Orange background (derived) */
+
+    /* Transition for dynamic sections */
+    .section-transition {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    .section-hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none; /* Disable interactions when hidden */
+        position: absolute; /* Take out of flow when hidden to prevent layout shifts */
+        width: 100%; /* Maintain width for transition */
+    }
+    .section-visible {
+        opacity: 1;
+        transform: translateY(0);
+        position: static; /* Restore to normal flow when visible */
+        pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Header Section - Kept consistent with other pages -->
+  </head>
+<body class="text-gray-800">
+  <header class="bg-blue-700 text-white p-4 shadow-xl sticky top-0 z-50 flex flex-col md:flex-row items-center md:justify-between">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAC4CAMAAABn7db1AAAB8lBMVEXuHyX///8+q+z7wADj4+MAAAD8ZAADAwU0NDTn5+fr6+v/xgD/xAAAAATv7+//wgC3ubjd3d3IyMiPj4/U1NTCwsJkZGT/YQD29vboAACcnJyHh4eWlpYAAAmioqKysrJwcHB8fHxbW1tFRUUYGBgpKSlPT0//zAAiIiI8PDzwAAAAABH2wwAQEBD8uwD56Ou4lBMnAADdAAD5+ubYDhb0TxLuY2IAExD5owDoQCXOeVr4y0n+/fP313j799s3AAAZAADxytDwFRjucnCjeSwkGwAVEQDuvibCHijrh4XsPD/ulpbwq6tJAACLExW6uHEwqvaUdiBUAABoVg7RICJqoMvmbCzznGz0g0vy3tC5g3nzdEH00ryvhn/0YyDyyKqXj53ytpN7mLLadEj16rfCfWT23oykiYz6zl7wp4X64KLraA73kQD2gQJ9nKh/h7rKoACVhrUxMACcdpxJOxa6WHDFSmJYndveOERojb7beSiwiSaBZxyrHh3mUkmpUh5GLBV8GhyyXoErdZ8iRFYnWXUNJzVbEyJlTCUtGxZ5ZjOPajROOwA5LRuJtKbPQFN6sbbNulqsuIFMrNWdWxdSMjNsNhhHHRMOKiphLCyqNjnemCKGPhwgAxqALDCbtpFHbG5ISxDDRS8yABewCwIcKxnpkpkTAAAgAElEQVR4nO2d+X/b1pXoQZHXJEASJECAgrgABBeIlLhIiSzJYyeSoFikFiuWxOQ17YwnbdM0jaQ3bKo2nkpyyjaNJcdK07ipHafjTtvp//nOBcAFIEBCdifpD+988vEik8AXB+ee7S4hxkzyxptXLPJ/bnj+KYUYs5D/y7iF/DtvfduMtmIFH3vjuxby8e/967cNaScD4GNj/zZuRh+/8+/fNqWNDILfHnv7ilXp3//nM3QbjY+N/eBNM/n++D/fELUFH3vjh1adf7PkL78KMvyO9uCaczGxj//wm3Mur75yHct77wz7kAP42Bs/spJ/U87lxrt1ryZV73vPAX577Mf7FnO5+o04lxuvVEORiE5eLb96aXCQt/ctoWj8J9+Aob9b9fbJey8/B/iAc/kmyF8te03y/vOAj/1g0Lk4aqArN268PPpDTt/1XDdze687XWso+NjYj6zkb/Y7lxsvv//u9fr1V965cePGq++8++571+v1chlGVblcrr/7POTveL0RM7mTaxkBPvYjq51f+VeD+eV3XsGM2iCqlvGvphtGqq9cnvvGexaFe6tOtjIKfOzH1vh/5d8Fz41X33+vbga1aspbdXzLzvJqfQDc6cWNBB97+44l57ryk/dfqXur1lsMSN3ZlznJu4NXcXpvo8HH3jA59PHxgypo16pfO/Chkc9OXh6wFK/3+TUO0ucWxw+8k6OZdXF0ZU5i9YXeF7FxTXpDdHwx6JbbUVmO8v6g/VWf16sY8m89jYdcg79yyXB147rNwHlB8LGYYS3jh67Bq5cGt7mIY7biFvz2/9Xd4viha1OpOica9vKOjcLfc3p4t+Dd4mLcvalcFvx6KDQQDN51BP8P9+Ra52LcOzj0HeSSjtzXarXqZYteHF0qsfHT227JP8Sdi/FF1xp3vquNsLLywQdHezt1kyk6PzuhEj9zC357DMjHF8sugs+lwWMLaLa9fR+lj2b6yR1N3EMQxNTPP3RtLm/vjx+4NhXv+67dioxuNdWpqSniND09E+rdwTlRIzD5L9yTQ3FxeLC4CKlgKBgcNU5dRyAJ7c6p8+vrqxtTjdkP+q3lFUd3qJH/7j9dk4NzAUvfPzzE/JFgMAiGE8G/90sH3KXGfTk0R2zVQFbWp7bDO/1JhVOOqYET6t1LkeNUC/D3fzmzs3PcCk2W6/WZmeOdnZO9vb2Heyc7HTN1tlCziOhU3aqtbmzc2xLuze0umMYn1CnO4ISquncueuby5ke/QshfyVfQ0VElX8QyXSiBFPLp8LF+67o7R+5Tloh5cn5CVdWJlZWpNqpbhr9dnkl0ZMq1cxkb++7+R+doIReXRZ7hM+GALMdSCYlnWZbj4BexcKG/7LI78CjaVre2JjQFrtamtgfAIXsYuFIXnJj4tcsh+uFvPkZPMjGJo2iaJGkqXswWEEKzBSmqCxu/adzaVQQSMrPNidqq2gVPtwZH/UDe0wMnVFfO5Y3ffoKyEstQFOnThOJRe7fduHW6JBrgvHxTdwyOOalJaNQm7tHGe998C0bngMa9g8k90U9+943R6v4YZTiyA60JvdzYPiXajd1EBzy2NqPpzLEKMAmPTqc2Vyb0176yZWPjdnZOmMhHZy4fflIQyH5sn08obbfv31/avRUzwKMJdHwJjWeXmlO19Skd/MbqRHvaNsRVzeiEhXzkEP04z3S4DcULWYQlH5d43iBHOxr4dVc2jnaJezj1wPe/J9yd2z1yypz7yQmr/HoUeIWlMDQtkByrPQOdXDs7e7CcA03HdGvh0UnQbkDZCou2pzZrL6mYfGJTmGos7zhVteU+8gFw9efDHfpvkUhRAs2m4kqgkNPAE0fHrx2fFZRS4ayQxUpnp/cweP2Vd0Z057HIy42JlU1i/e7ElObGT8MzTqlE9XrvcgPghPq7oc7ltyglRDOoUskrsSTigJzkz187/vR87fzBg9eOfpVhATywV9Y7GOXy9fdvDIUXchB9qA313tbK5jwBXrGdrjumcX3toUFwYmpo/P8NKoCm46koRJpEkccq55ZfOzv69MGnZ5+enZ8hUDmbfVgP4RRGu1n1+vtDbJ1/0p7aWpkj1Kk5YmqdJuaW95yw8UscBk6oGz8dBo4CEDGjEG3kIhJpAGfOP704fg2wXztCD9ZE7Mg/6IshUEmW33VEj6EmsbKuD011a0VtoOMhSWf15WHgw53LbwPn5+elXE5RKmdHSQxOnp+daeA7GDzBgyO/aQl+1bpDfkrFkTpfm9fAiQ14gjbaKzvX4yPAAf3Xw+z8ww8/3ruJ0uFPzxQBg+eOAPzo7OzsU3S2hgO/hAYGWLVuG43Yhba6uWI4w/XaXcjH0UXdkXwk+Iji4rP65ORkMP/pSUADzzw8eu21o4sH5yfoJhI1cLv3beceE5ql6GGTWFmZv0uo2+m1ltdrby+jwYcVF5//HjxGMFi/OHuAaOxWkntnR6+dXRyFK/FMHGUkcOQ7dncd7FdQuVvEfG1Dc+LqvIeGUmJefQqV504raFfaugB3Ki5uP/qiHglO1lvHJzhexjiKJMWHr539/SKNClFKoKRAVuKn7cBtels4+kBGuzo/MQF5ysq9jdUtMPjT9lL45rFNRzhSvTEa3N653H70++BkeWbvIXAmIPVGhRRJSo+PYXAiRGqXjBaTbO7Ethcw0KbP+BsTwvzExubW5j0c91XsWYgpYq6xnLYjv+5xAU6oE4ND9PN65PgoXSlkS8iHvy+kUIZm0dHNm2uI79ptNLtnl+F5rR0LyGghA5/AnvClidqmlmiB4jfXYbTOLsxUBwqKd1yBg6Fbi4vPgOdiOsnTXEk0rsAXZc6vxDOBuGD8RMjJykMH8LLJWGKQ0a7oiaG6KnQy29pKrbauNsJnM/WQ47eHg1t6Lrc/q8PruwhAFSHqCsfCFTMBXiCzUo/Hj5zATVNaQvGWOk/rvGAi+gPcq61OEesUxH6E9izh4BXX4MTEL3pD9PbnWhKxl2ZJXzJLd6/BIyRRbInr/oBBD1q22F5zUy2Bh6ZeQmBe3ZlvvrUBCluvTcw12+ioZXLpw7JDq/Q5l0fXsRZDr6Eo5ctkhH6AKM3H+36w1prsdVfMEumNTyqLmhu1+ampKZWYWK1t6Ddc2dQS3NrWKgF1s2ms9LvTkeCQ/XTi/+vaNULHSCSZjNzHSSlyIiv32QAUz0cnrbo3ZBNGeioXscJrq1tbW+vzxNaWfjd4AAz+klCrebYmttFxH3h/7B0N3u1cfK5PQkZmUIKm5Azdd5Uo8qMY/E4aT5MN5PII+fdmWt6Blnf39nQcERs1obaytbWyslIz+hP67+rqyoS66dmY+9tF74umppYbcMhcYIg+ej3UAY/HkjmF6rsKnU3KSRiU2Zj+OEqM46VkCfS+MxOymEw3CkHwIVaFrY2piYmpjXVMDhazVdPylokVsHhwjBP92bkp2XEFDkP0w7FHhrVFWhdhCJkVw6vQEuvByJKMB6mmdzAVnqYoH8PLCN3ca02ald6Z1okhKH22XtKH5AQxv7IClu6Zx75lan0F33Vd6w51bezG5cGJqY0PP+vcPuRtHX+CjHBDQ6UMumaKUsaTQZmc7iXzuDLykSRNJisI7ZinGYymBV3YnSN0g8Yyhx34em1TMxTdxWDXctoFr5rzYpfg8P56LrV+7EelQFb7PocCAQQevJTKkvEiLeI/e5gC1W26MDI49ZZJ5/qKJQZtY0vuf68rHt3AN1a29L9DBdoFt7TK3YITqjElFgoeH6F8ipX0zESCjAXFYTjKGVZGchalsBFk6G7XhaSkgtUdv6x/E6KmHuU74OuelXsTUxPEylv4RajzwmbPVKyTKq7Br+k9g2B9DyGZJSmfktFHWJJDOQZYxZiE08UEBMQSRChft9tF8wGoDfp0rtuKPNvodAw7ulmt1Wpb65u1lXuYm1jxbBDtaWOyzNpbcg1+qIEHW0eoIOFWFslWcKj0oUoBBViPmGFyZBHA4YeiQvlIn8j1uosBtNevcu2tx5eaE4Jm4qra0fjKxmpN8KxP6D0WT22iOftA86eRgTkV9+D4zqGZCsqSuh3QSQW8tpAEWE3jgljyKSVQOF+CoUmBQylFDXJayhtNOd0vacmpcmtuQ8+rVlfvaaXEam19Sp14acszD8+ysQUOEkx8JtIbFs8FjhcBBY8rSO41PJUkVrmiuRUlQZOxOOfzCJIiaS9EiqFKyhiktIyO+jM9fOfcrbl5jz42N1cgCG2teDQfrk5s0SubYC+rtXnilmZjVZsZAvfgwD2TRnKv40myCk5tfQmRhDwPzJpKZeVkJqPrmRRiCjyDTk6SlfRxXy2GB1oJwG/oYxPiz+bW1ubmW7p3nFrdWtlaJ8CXN40ScNiMxCiJaPad6XBrfprPxYzLiIrWp4B4yRs9UZJBMZqVOioXQeVd8Mj7hsZrhlPBlY86AeZRe0n/K5h4E7Kt3b/jboFt09ct91Uw0T2kGNykj+PwqOMUhcHpCV9gdTWT3Qejsjl4hO7roQp96ZKWIfaDGwJW0nXs6npto4n2ypGI/Tyve3A8MDnjzTMZJDNazzaWy4iSnOO7EcfgJpN+08/IBOpLl/BYy2Lwlyy3mVoxekPEHFRy7YWZYH8e/Hzg1T0kCwZGBmU5XZkUI8WSEkdauJlYIWF6FpLNo17sxfOICgafsNxGvasnicTUZo1oLJ85rwJ0D95KI8N8KbFS6eqYpCjzzAq2aCZeEM0/I5k4Oun2vXGCGrADBwvR6gmVEOZf2k3Xg45Tjq7BoX6QO+MyG42jokRbcLuMVLRY4q3/SKVQuguO4zfaVedXBsAJQgPHc0Gn2pM6Lm1yC14+QkY8IfmsD0f3JOcjrXgwOBlJQYrPYvMAHi322Qq4FdTuTlkNiAr/0khjH+68ttY1+HSJNcDZKMkFUBgVYjwHhtLxNCSYDMOLeEYoOsANrlIxZoawvItnZTudiQGBAnR+bmltxjtkOYBr8DqK92atfL4k8vsRKsRjEsv4KBCS4XgxGcdTtcjvs7EiKo7OuuAHP1GW5+7V7qp295q6h9vN6R2H0HNJ8BmU7KMh+QKQAzoqlnJKHCSbKwWgzkRh+Gl2UOEwYmN9MWjxowpYyuDYxAIDE6ezD72RiPOSLPfgOyhm8ssyRtTQ+0T7kR+l7MCpaP6ia+SLfwifqvO1lYlBlasb9DoMzML16++9N2QKxi34tT0kmsC5EvLbC0KSnb8hfcVKt2te/eX5UnNqtfbWvGpBVzcg8pyiAOnMfClw4lf6fE9PgSJyIEeIJe2MXMj1Rmf18CN0qwnGXIMq31RMQNmmNpb62mIvCn7ul0zgOON2Bic5ZhA8g066Qf/wykfppVOVWK/VNok+gwEXSTRni9FR3JcAr1jAIQ51dZ4OY9HtHMB5mi1GB3ROS30NtcMrQB5uw0hcF4SV+Qm8ygbfZqN2T72FxJHc7sHzVnCI4h1y5J9d2m23l541mo3GdvvWl7GizAyAk2yvmggdXLlyZf+PC+Htuamp1RVg35yf39iYg/QQHIo8mvsS4BYbxyRcHJOH/bvbjSZ8pNneJrQ+1DbKDHLD51HXrQQX8fKoOx89Ti9tN1UoJLZW3qqtQCEkrL60u0CP5nYPXhwEx0kgkLc1ak1OG9qvszb6xraCpmdM4PrKrqX2Kaid2JhfxWWQ2ph1o/BL2LgNONi5VELbhMmjNW/lE3ZOBUZnER13Bme1syD9TzAm/Eu7201iSp3Chn7anZL5XwTH6KlApd2YMz41d7q0kOHs4g8IlenV+lVjw8X+H/EwSa8tpEHz26en27dQwI2lXAbcNh5CEUSKmdwTuOt2uz37REmyTumuj0r2+cMrePfi/sFxGkdbdDxzsvewtLCw8CQXH+nCLwf+pTnk96NTJBdNxOSknBKjjLWo6P+g1JsaKgP24UG1foQVHq6Ug0Hv6xxeo8MIo6EvBf4Vig1BorTc1vjN8VN8rxVXPjhYrHond/SEB15EeXBp4T8EXH1myg6fS8CRr3UjUDVU9gZb05qhVFqh8uIl97m6Bm93KrcXAOegYO6A48ZYfVoLYOGTcnnxytXv/++AP7UPKpcCZ3JGK1CPnrqB+9HNVmhx/AqQX2YXi1twcK9ZaxPi0gI5QtcfRkL1M82jhKdPqofGbtFLkF9C47kXBvfJvcR2sn4U1kZm+O9fH3Y2GX3H/QB1rfEGKrJuwTuduF4dzTCcj2PIGHqgtz5D3pm0Xi+F0x/1b7x0vZHFDfO1a1evXr2T9g/0SuyI4VeG41j8dhgpFcNdT5KTkaQoKIFbn1jjQW/rJK2Xef7wH827Rd06l1HQV/cP8Y4IkDQaTLHNApU+y2PMbKkIwCQHaa+Cn0BGGYpJ5GVBQvlgJFRu7dwMG9zoj+a96ONXvu8uAg2lVvchSARDeGK77D2yLyVx2KEFGlRNJbLZXIGh2BJCWeyB8KxERYK4WkQKTdPJgCdaQeX6zMlFulOBoE/e3h/Y5/rC4HcW++fiz1BqEBx3DrmEnCvkocyM4jmgpNBRNPxDAYH3Jzn4cSDGkVGaL6Czm2sdbWPuNyz7XLUh6sa5DOE+mOyfcAqdWCIQSfkYJipnuQQu2LAtUwz+E8VlEMJdL1JKKEDMkkxJq+kKUZrNIZTuYWNukB9esZDvuzjnwhH72qJ5hWtkB2X7uRleSmbEHMpHtfkrfSoZkFEKgxeilI+SYmArSITM12i78ODI031F9cf6QvtH37WSvzl6iDpyV63LTY5RyfBxNA1UUaxGnhMhTccdUK3pQuLZ/JIoQxEKfyfFGAt/z4IzTBQ18DgZ73UGUOW33SU81q3oLg7RcQIf4A61EAJroAWOjcclweeLac1NKhmjMJ62VtUXjWPSGJg2JO9kIiXgphxDchwnZSpg+XSnpREOo+nf9C2aettq51e+/3zg/XYSieAl1cFWHjE+EchEMIAMRWHtJkie50hs2lkdHFtNVgrAg4D+U6KQ0IarGIcnZhT4kw4eDofzO1/0r1O/PXjOxYj47zAuDX1HguXq4tdft2aw/B0sQ8FW4VOQP0FjXyHT2QQQgyHktbWqUhI8ShwPQZyRJVMxbE95cN8iSfGBHEknIVyGUfjipDX5unmBvc0hOkPjvy331c4e3FDk6z/86dZ/hdMonc77IfTxFUwLas9yFDZaDiXBJnBLHEdIMpoElWfwnC34QyYZSyTwP/FsEclSJsOR8AbCabz+tFyOWMC1o2gsbnGYcxlqKMHWyeNp3IQNa68XyQIOLnEa3EYxKoAl50Qka5ERuxWSofgM+PIMXsOCvaAcpbSBm0vExZTE+mjal6r4T2bqkKoA+MBizIETuu4MIbfjvqMvWIh4d9Z6Thf7gZIHB5cshS1Z0jaj+GJxUDS25ChJKRyXAYcnC/hBWIrJgXOHP2YTnDZdwaTimVTxZl1PswY0Pna5E7qcLRzn+eF+bnC8AgPKznESOAtRwG6F9cksQ0XxOKV9JYmJsywMQfwgCRzweVJiBYHycRwkLkk2A+O2syTeDnzgKJpx5xO6bLivGe7vCJmwMThFytgKwGYN9y1RVEqmsYORBb6YIrMxupDy4TiEWDkFNT/N8KwvlhNJpcBSlMQH1ow1N5Ev7Ha/uHcuNuD72gIPqE/Sfis4Q4Oa8xJTwMkTdt8xmpJzNAvmngXcDKg+JiU4OSZJLEVTFJ3KZAs8mYj7eFTJyskoV1ozNntGPrPdtuPaudgNzSC2707CHO6bKEE8LVawVQSw19DciiAV/TR+AzBOUZaXRZYmBchTaDGuQGII7yJPknyM1FYPIYXNdcE/t99vNHD8n4NzsQEPwtCMHBuZJ1p+/Ozp3Ubj6bOvZv3YPoAxxuYDEl4X7PfnIMOGEVpQMiKH9+5RFAu5IuS/2POAw4HYlIdMIObz5cCdohKvVAzw0CNbbuxcrljIr9gN0UHuq5PYUPTGAUL3G/qaDFUlNu6DC0/mFEWMxVnaR4mxlCgxURZXdCQN0FIm509kcDIOqWwsj6trBi9QJPkklG7RFF4B0NV42XmDV2zgEB2bFH1gZN7BljJ5onPn282+f2tDYMfLPShKwCkVTrUoH5+I8Zksznhx3h3gOA2cSkHcz0e1RBeD+6Q4ZDlIYjo2butUOvK2i3OurOpexEEzUvdrHaaFtukfodCnaSYhxiSoCnx0PJvjSSZT4iGQpnCmIoBdcD6wZAaiJvb4UHlgcEqz8UxUkUg20AF3MHFdXDgXi0Mpa6EnuKOPzGemf1QbyyVGLBQ5Lo7rBsj0sBUnJRIZDQABV2rwFCWOZJNcUlM9gJM+WaKjMoROkuqAR+qPhu4FHHQu1iFqRvN2Qg+OPOj+hvmxNmYDooKKkJArMZqMilrKimeMjdoIJwFRCoNTvCzj8MpTsUAhnoDkHJwjqS2HMwLQn4dhYxk4W/TKW87g+3qOEpq5qVnKR9YB8Dgvx1GRA3uBRDwmZbFnJH1QBelLQATICqOg9iIDWbpAooCSpEiWh8DTKZvgIW9q2/fqjj6lK9+1Fhdm52ICO9Abe7qlhIvVw2tm8GcokwFKMRlLMXSWAd8coClwkFlSwku0cNYYpXG4j5ZkhpN4PNlpWoUDacCRtmjli5HcYwPH/43v93cuTJZSDeldppO0NkswWV40katPUTwDZsxD/KEpBZszJIVg6jEhi3suZAlngtmYxDEaMmntlneWCVWvj1Y4yA8GdP4TW3C9PI54W3u6T4GkIljtJ1c3UE4uohiVBffCZVi8PDzDFVCBz2pVPidyDIUjve2MOFY4n8dXjQSHupSePBo4cvE7dlvGtKQw5N35OF7Bi1GUj2H8l6smW8kjKZWP49TVlwxwVKykxGMZWeTxopWRExK4mENpUE7INr+ykdtv/Is1inadS5/C9eJhR/Gx2lIUiVlrRbzlg36VfwUFjwRuPMEwYoL3sSzH4Jp/YDWZAzeTw7uwywdvu+PGMhD/v/eWFVxXeOuc87AVLS31JHcmoU6+00f+FBUY2geBkSQ1gxiw4qFCSWi6FSpXr7o/RAeGqNUtGsVFT+GaCw8eZwW8e0Fb6BtFO95Q+bAPvFlEksPcmwsBT4mnC/ch+/m5e/K3rWXR+PfN4JPayDyZxrtNGBFPNmYV5aIVMnmWZ+AAn5cbQi2ey6/iVzj1C/cHuvzAekL3VRz/zeDlnVxANqxfkCCTzlzUTeCNCrIuonDNLaE1bUZ8H1/IaSv67du38SlLJrEpLt4ygwdnPmE5lOQEj8CI8QqLN508/Nrky58ZjbhLC8UXwFAgwgV121PvDpxzAcyPPvvii9df/+LPn5lSGbvOhQl88oOMx+MrVEqlQL4S0zbGkOgPJvDTNQg3z8MN5V1YT8SNQWPd53r79uev/75e9gZx56x8/c8mvQ8cXPxmD7yMNxIwGJbiJa4bXPnlRj84JOXFyxsLFBkITeurbLoOVp36dR/ao89aphPVIubo+rbFzq/0iA6CwZ2CNV2HF1B6agJvPkY59nKehaRwjtvZf11e7K4S6e4WvT322XXrprjI703k1hS9R3StOnlSGgSnM+ZqgmicA/lldE4zYg7Fs52VE/0JUGcT/eevBwc383k/GxtC3ke0H9zLWaiZpEeQzeUERKE8CvBu7ZwUfHheIulLIuNMiaApFv/uQ1D3n6+XW62Wd9Lc2o783uJcvjNuD04snhQ8pNSXOjI5xUPHty3gxOk5yseo0eYC4RVysYLWIYU0RV+xX672h2JCJf7zjf9++Kuba5W1taNj86a4oDmHvG3qXPRf5PA470uketyCDGGUR6dmbLBQqPdRQPINYddWNnNsqohQIctCbQ1F53Q94g0FzZky0Xi2hFAa0uFsVimgD0x7lCN/Njv0270TOs3gV1sLmTjbNy5zCsuX7jeJAWm2Z0GPIguVvs0Scki7GDYqZgLa9AQrcAmOJKMoXIc85cB0nUa7gooyZMmizyNwKWX6on+3kBVccy7jNuDE4Q5U6D1wLpnKPXls9oYdeYbyoPVMEh88JdC6CPg/vBo7JsdzOFFTYrxPYJNKXoISroJakYOrpotsz6JCgolBuQSJkZzNwpce9B3DY9de7E6Lmq3g8C+5PnBWFJF5ZF47PDjU7/0UCmU8jZkv4GXYcgxLMpNVcqVAQUsu4YVAzgsjs4BKGZGkeWwqJjtpgsHFKE8S76RklHylUCjkUaVvN5+Nxm8/6jgXsx7VvyJsKlKHPnZf7af2Toa8wckDfPfTBUTSAiNlA4VipX8ldqVYCJRkiaNx04gWUT6QiWcYOonWZsDEJ7u5ptpYQAHGI8Tx1tUY8gc0yaO+cxqDtn1RI3OxGu8s3r+WynSMvBd87hyU9bcY0UJfI4/XLPsYQSCxbSQzmsixlMhztEcwVsJRUahSZdYn5tGe3l6e7Ci9seCXBQ8VB3guiwo6d6AY7m1HiHgdKlMtc7HabhsvyOUr+hBN9sL9IZ4/xOcaQrGBHRqEIcjMmWwmloBqHgwcbzcAG8dGHk0ljQBFsnKU4VI51DmNAbKQRc0dnlZQChxvvMR42BIKdKQQPumBO/QwbmtlkRW8+RWKx7P+QIKk2exCR+F3FrGHDZbrrVYdaq997XMx2kfmMmAcFcVYgkNyGfBqpYrSOQSMpClehtp/+qQXXILVfe25ReCW84wnWvAHeuDpPo0PzhJ15MdXxq3g4C/W0Pmzp6hYrCx3uavaUqSZh2tra5WdELYVGFlxD0nn4mAg2UBnEyGnxAsFJZPM85QefmQ8UvEM4VHf8TqhK83/0raTy2DfUqXS4w4U0719n5Eh3a4f3BkEV4kNvA/06dO7nTWzh2VvJFifOQ/Ek3IuPL0ziY0cwqfMMxQrghuLd9YOMbKCHyQL+SNYjOzv7ptA6cpx78SV8mNcGXpioG8R9XMH8uHu4IzUP3cGv/3GIHiHv7t5AaroiHfm4ScJlv/x09PTvx3VFwTA/wUAAAaBSURBVLXRtbuMihkxyuEFKx3x4eO9OI5PyJCgLLXbS/7O5H04fdIJLsEdvOfWIxV4T9SkbwzedYdDLAWLI3hHri1qzRYkc9HM6Rw8T2NhRgMn5hrb95chpCvgOJKxhCiKiVQslZTjyhPkf9x+ildnN9vLnSmwcHpPT0WCrTWUoT1cQPSwBTN3IX3UPX2g/NmLgS8GI3jiUPJkns1piYr6t51g1xs3G886Djw9rVnG2uPdp0+bzbnuJ551VnqEw/igNW+ovofuA3he9jABZOIOFFH3ALvIiDbdaG7vZCudY8jl/1EJtXkLoe32TnCyFwK/1JcVoF+16n+9u7GBn82yQebuctdatD0Sx+n7c0+4XNbDlCzcgXy6uxLUJmxeBhwfCzyD4hz/ZVPV1qni2+/gpqIR+k+NxYPpHQiK1j09uqhQNBnkuFHTOgo3iMeBnEDHrdwFdBbqDs0RfdHh3IdevMAmTolf6SliO43vvod9+eTi4f6dO4cXOlN4ul695nQVFXynQV6ZCe0gKKm2n7CQpBQs4MV090CzUQofDn6nGgnNoKwQWzJS21NttXf6qDXphdq6Wo3MdHaJ7QX3h1yoed6x84t6erlJzC2J4AiLFu5AbzNcpD4cezj4tWow2EIK2eXGGYHmlP3g2iKRULB105jFTdcPhl2JuBvuTPeuYYXvZjwcpF8DFt6JPpHQcJcyAnwxGKyjEoePa+vIXDts3H+nVa8fX6QN7p3Fodx4+blOnkZLDaLxxEcH/FbuADrrbRMa2RYdcrM7QW/9IWKjxVM85pqnBrnfAJi+KE53DOAvXzsauCGQ2xifbRNzs+BcrQMTFO7vKLxcvTrybHHnW11bxHEnQT3RiuXmUsXYNtOJKOHuopDwzV+O4tYSeO3Dy6fEdtYj+QcMvICOOmeo4WbXqLPFne904C3PoJKg7GqGsqv4ckvYJRKVv4fNu/PC6E8jsbWsTBvFs2oTUb5BA8c+vLu7CX9hxNmijje6WsUBk0rpRX5bycmCWNptqI2170F+hfqw/U9t3bdVnmoqh8vtih5rxMSusLv7PeTVv6BODDmh0xn8sAy5UIpBgV2I3qeFpE9WopyY2969uKY27i8Y6GG08PjUFTfRmNW+QvyPQsUGPDg2FMMVlr1dxzrshG6n21xbDNbTCikXoxVQeTuVyPKsHBczu7O4fJ47faav3Vx4vG3TvbCVjWd4SqytPo6ygx48ULnZiT39s07qzxzNxek2d7yTO0j0BRIQ4JpqI8dySoYlY7faC8Y8ebPx9Nmzvv15o+UptpRmI8tkbTxKescYmea5VdXRuTjdZX+y/kGATiAa1+EbanNJFHhFKW3vfuWe1CxqYzmMlohZSbQz8IeGCw9Vza0X9XeXA1cPJmcqGUE74E3IoAbR3C1Fhdjuqd++P+RGmgB+eprj8gMepRDuHJwaGsh41Jfs51yc7rIIlsJz+g5FQV4GH97cfvZV49ZXl7ANq5wj/+muKA8qfPpmq8NtU0vaH//rCF7eQ7RknMYoSIFbpxB+5rYrp05fcAV+6/TcZmT6tcMaNG67TM3++N9h4J5Y96Q6UkZL240Gem4Lx/IYtdtibiBHCYeN7fqhsn2Gqdod/zsUPNt3qKEgxUvovOHOZ9vLl2j3y9SACw/7j43IU7axE12mfuEa/BDABSVp2trCP2k7fdyV3J/dTSoWhRfC6eOykVk5ctsd/+v0yTvlE0TmTOBc4IUMBWx8+Us5YLbwQrqyo9f1wWHcNtOiTh+8VoX4E+8H95WWn98V6uAoa449pWI4P9NJrEYkmGrzp67AicP6zUA83tv37FuYfSEDB7cG4Iqpj1LpHssXHF5AaTLxM1fgxOJOuFLsNMoFFs2+oL6Ju8vFbKFvaBZQ+qERd6qHo7+Oj/91BX5t8S+dky49vpT/8Yt4cE02Zgt9llLIo4vO0ZMHo+sQnbwvcxnysWu/3ENaM5iJKejZC0TMjpznA4allALFdPhBS///B9hGHQfyux+6ACeI732KUEnJBVDl6dDPuRMomDtRM59GxZY36I2Ug4vusYl+5zLqc88eLz3+6q8vwtuTDT/yF8BGFtAHe61gMFT2Vhevjv6amYj4qRvw7qf/IaI2bi2BPP6q/XW1ulhdvJyyOxdRf+Ye/B8mTU028KZckOe8iO5c/qFc35Bo/+OibxviuQSf0P1tMzyfqOp/fNsIzynqPyCs/H+5nPw/YJLlb//8p8UAAAAASUVORK5CYII=" alt="Delma's Gaz Hauz Logo" class="h-24 w-auto rounded-lg mb-3 md:mb-0 shadow-md border-2 border-blue-400 md:ml-4" />
+    <nav class="w-full md:w-auto md:mr-4">
+      <ul class="flex flex-wrap justify-center md:justify-end space-x-6 md:space-x-10 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-blue-200 transition duration-300 ease-in-out py-2 px-3 rounded-md hover:bg-blue-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-200 transition duration-300 ease-in-out py-2 px-3 rounded-md hover:bg-blue-600">About Us</a></li>
+        <li><a href="products.html" class="hover:text-blue-200 transition duration-300 ease-in-out py-2 px-3 rounded-md hover:bg-blue-600">Products</a></li>
+        <li><a href="rates.html" class="hover:text-blue-200 transition duration-300 ease-in-out py-2 px-3 rounded-md hover:bg-blue-600">Rates</a></li>
+        <li class="dropdown relative">
+          <a href="#" class="hover:text-blue-200 transition duration-300 ease-in-out py-2 px-3 rounded-md hover:bg-blue-600">Account &#9662;</a>
+          <ul class="dropdown-menu absolute hidden bg-blue-700 text-white pt-2 rounded-md shadow-lg min-w-[120px] left-1/2 transform -translate-x-1/2 md:left-auto md:right-0 md:transform-none">
+            <li><a href="profile.html" class="block px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out">Profile</a></li>
+            <li><a href="login.html" class="block px-4 py-2 hover:bg-blue-600 rounded-t-md transition duration-300 ease-in-out">Log In</a></li>
+            <li><a href="signup.html" class="block px-4 py-2 hover:bg-blue-600 rounded-b-md transition duration-300 ease-in-out">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="py-10 bg-gray-100">
+    <div class="max-w-screen-2xl mx-auto px-4"> <!-- Max width for very large screens, centered, with horizontal padding -->
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-bold text-blue-800 relative pb-4">
+          Our Full Range of Products
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-orange-500 rounded-full"></span>
+        </h2>
+      </div>
+
+      <!-- Container for All Products View (Initially Visible) -->
+      <div id="allProductsContainer" class="w-full section-transition section-visible"> 
+        <!-- Sort By Dropdown -->
+        <div class="flex justify-end mb-8"> 
+          <label for="sort-by" class="mr-3 text-lg font-medium text-gray-700">Sort By:</label>
+          <select id="sort-by" class="px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base">
+            <option value="default">Default</option>
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+          </select>
+        </div>
+
+        <!-- Product List Grid (3x3 layout on large screens) -->
+        <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <!-- Product Item Template (repeated for each product) -->
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="LPG Tank (Generic 11kg)"
+               data-image="https://www.ltanks.com/uploads/16807670561.png"
+               data-description="Our standard 11kg LPG tanks are perfect for household use, ensuring a steady supply for cooking and heating. Each tank undergoes rigorous safety checks."
+               data-features='["High-grade steel construction", "Safety valve included", "Refillable and exchangeable"]'>
+            <img src="https://www.ltanks.com/uploads/16807670561.png" alt="LPG Tank" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/87CEEB/FFFFFF?text=LPG+Tank';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">LPG Tank (Generic 11kg)</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Our standard 11kg LPG tanks are perfect for household use, ensuring a steady supply for cooking and heating.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="LPG Tank (Generic 11kg)">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Solane LPG Tank"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59CFcN7YzULjswG2kq7nQF1O2AQLJ_J0YQg&s"
+               data-description="Trusted Solane LPG tanks, known for their quality and safety standards. Available in various sizes for your convenience."
+               data-features='["Premium brand quality", "Enhanced safety features", "Reliable and efficient fuel"]'>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59CFcN7YzULjswG2kq7nQF1O2AQLJ_J0YQg&s" alt="Solane LPG Tank" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/ADD8E6/FFFFFF?text=Solane+LPG';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Solane LPG Tank</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Trusted Solane LPG tanks, known for their quality and safety standards.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Solane LPG Tank">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Superkalan LPG Tank"
+               data-image="https://www.brentgas.com.ph/wp-content/uploads/2018/07/2.7-2-copy.png"
+               data-description="Superkalan LPG tanks, a popular choice for their consistent performance and affordability. Ideal for everyday use."
+               data-features='["Cost-effective solution", "Reliable flame output", "Widely available for exchange"]'>
+            <img src="https://www.brentgas.com.ph/wp-content/uploads/2018/07/2.7-2-copy.png" alt="Superkalan LPG Tank" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/B0E0E6/FFFFFF?text=Superkalan+LPG';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Superkalan LPG Tank</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Superkalan LPG tanks, a popular choice for their consistent performance and affordability.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Superkalan LPG Tank">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Shine LPG Tank"
+               data-image="https://storage.googleapis.com/takesg/e41fbb63-36d5-4085-80fb-c9f9cf72cf6a.png"
+               data-description="Shine LPG tanks offer a bright and clean burning experience. A great choice for modern kitchens."
+               data-features='["Clean burning fuel", "Modern design", "Efficient heat distribution"]'>
+            <img src="https://storage.googleapis.com/takesg/e41fbb63-36d5-4085-80fb-c9f9cf72cf6a.png" alt="Shine LPG Tank" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/87CEEB/FFFFFF?text=Shine+LPG';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Shine LPG Tank</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Shine LPG tanks offer a bright and clean burning experience. A great choice for modern kitchens.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Shine LPG Tank">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Gasul LPG Tank"
+               data-image="https://www.petron.com.my/wp-content/uploads/2019/06/NPetronLPG070_R4.jpg"
+               data-description="Gasul LPG tanks are a household name, synonymous with safety and reliability. A long-standing favorite."
+               data-features='["Established brand trust", "High safety standards", "Consistent gas supply"]'>
+            <img src="https://www.petron.com.my/wp-content/uploads/2019/06/NPetronLPG070_R4.jpg" alt="Gasul LPG Tank" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/ADD8E6/FFFFFF?text=Gasul+LPG';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Gasul LPG Tank</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Gasul LPG tanks are a household name, synonymous with safety and reliability.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Gasul LPG Tank">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Standard Gas Hose (1.5m)"
+               data-image="https://www.smarttek.com.au/wp-content/uploads/GHR-GQC.webp"
+               data-description="Ensure a safe connection between your LPG tank and appliance with our durable, flexible gas hoses. Designed for longevity and safety."
+               data-features='["Reinforced rubber material", "Leak-proof design", "Easy to install"]'>
+            <img src="https://www.smarttek.com.au/wp-content/uploads/GHR-GQC.webp" alt="Gas Hose" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/B0E0E6/FFFFFF?text=Standard+Gas+Hose';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Standard Gas Hose (1.5m)</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Durable and flexible gas hoses ensuring a secure and leak-free connection for your appliances.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Standard Gas Hose (1.5m)">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Braided Gas Hose (2m)"
+               data-image="https://www.totalgasspares.com.au/assets/full/N174.png?20200624030142"
+               data-description="For extra durability and kink resistance, choose our braided gas hoses. Ideal for demanding environments and longer reaches."
+               data-features='["Stainless steel braiding", "Enhanced durability", "Flexible and long-lasting"]'>
+            <img src="https://www.totalgasspares.com.au/assets/full/N174.png?20200624030142" alt="Braided Gas Hose" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/87CEEB/FFFFFF?text=Braided+Gas+Hose';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Braided Gas Hose (2m)</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">For extra durability and kink resistance, choose our braided gas hoses. Ideal for demanding environments.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Braided Gas Hose (2m)">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="Standard Regulator"
+               data-image="https://ph-test-11.slatic.net/p/64cc3cfe5ee41a4bd8287672338ed9d5.jpg"
+               data-description="Precision-engineered regulators for optimal gas flow, ensuring safety and efficiency in your home."
+               data-features='["Consistent pressure control", "Built-in safety features", "Compatible with standard LPG tanks"]'>
+            <img src="https://ph-test-11.slatic.net/p/64cc3cfe5ee41a4bd8287672338ed9d5.jpg" alt="Regulator" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/ADD8E6/FFFFFF?text=Standard+Regulator';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Standard Regulator</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Precision-engineered regulators for optimal gas flow, ensuring safety and efficiency in your home.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="Standard Regulator">Select for Order</button>
+          </div>
+
+          <div class="product-item bg-white p-12 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200"
+               data-name="High-Pressure Regulator"
+               data-image="https://cdn1.npcdn.net/images/165035127201ccc09d110e466b9d88b331d61a34b9.webp?md5id=2465517595f5ea9f225d52ed73a4d0db&new_width=1000&new_height=1000&size=max&w=-62170008925&from=jpg"
+               data-description="Designed for appliances requiring higher gas pressure, ensuring powerful and consistent performance for commercial or heavy-duty use."
+               data-features='["Adjustable high pressure", "Heavy-duty construction", "Ideal for commercial kitchens"]'>
+            <img src="https://cdn1.npcdn.net/images/165035127201ccc09d110e466b9d88b331d61a34b9.webp?md5id=2465517595f5ea9f225d52ed73a4d0db&new_width=1000&new_height=1000&size=max&w=-62170008925&from=jpg" alt="High Pressure Regulator" class="w-full h-72 object-contain rounded-xl mb-4 border border-gray-100 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x224/B0E0E6/FFFFFF?text=High+Pressure+Regulator';"/>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">High-Pressure Regulator</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">Designed for appliances requiring higher gas pressure, ensuring powerful and consistent performance.</p>
+            <button class="select-product-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm shadow-md transform hover:scale-105 transition duration-300 ease-in-out" data-product="High-Pressure Regulator">Select for Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Split Screen (Product Detail + Order Form) - Initially Hidden -->
+      <div id="splitScreenContainer" class="flex flex-col lg:flex-row gap-8 relative min-h-[600px] section-transition section-hidden">
+          <!-- Selected Product Detail View -->
+          <div id="selectedProductView" class="lg:w-2/3 bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+              <button id="backToProductsBtn" class="mb-6 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full text-sm shadow-md transition duration-300 ease-in-out">&larr; Back to All Products</button>
+              <img id="selectedProductImage" src="" alt="Selected Product" class="w-full h-64 object-contain rounded-xl mb-6 border border-gray-100 shadow-md" />
+              <h3 id="selectedProductTitle" class="text-3xl font-semibold text-blue-700 mb-4"></h3>
+              <p id="selectedProductDescription" class="text-gray-600 text-lg leading-relaxed mb-6"></p>
+              <ul id="selectedProductFeatures" class="text-left text-gray-700 mt-4 list-disc list-inside space-y-2"></ul>
+          </div>
+
+          <!-- Order Form Section -->
+          <div id="orderFormContainer" class="lg:w-1/3 bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-fit sticky top-28">
+            <h3 class="text-3xl font-bold text-blue-800 mb-6 text-center">Place Your Order</h3>
+            <form id="integratedOrderForm" class="space-y-6 text-left">
+              <div>
+                <label for="orderFormProductName" class="block text-lg font-medium text-gray-700 mb-1">Product:</label>
+                <select id="orderFormProductName" name="orderFormProductName" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base">
+                  <option value="">-- Select a product --</option>
+                  <!-- LPG Tanks -->
+                  <option value="LPG Tank (Generic 11kg)">LPG Tank (Generic 11kg)</option>
+                  <option value="Solane LPG Tank">Solane LPG Tank</option>
+                  <option value="Superkalan LPG Tank">Superkalan LPG Tank</option>
+                  <option value="Shine LPG Tank">Shine LPG Tank</option>
+                  <option value="Gasul LPG Tank">Gasul LPG Tank</option>
+                  <option value="LPG Tank (5kg)">LPG Tank (5kg)</option>
+                  <option value="LPG Tank (22kg)">LPG Tank (22kg)</option>
+                  <!-- Gas Hoses -->
+                  <option value="Standard Gas Hose (1.5m)">Standard Gas Hose (1.5m)</option>
+                  <option value="Braided Gas Hose (2m)">Braided Gas Hose (2m)</option>
+                  <!-- Regulators -->
+                  <option value="Standard Regulator">Standard Regulator</option>
+                  <option value="High-Pressure Regulator">High-Pressure Regulator</option>
+                  <!-- Stoves -->
+                  <option value="LPG Stove (Single Burner)">LPG Stove (Single Burner)</option>
+                  <option value="LPG Stove (Double Burner)">LPG Stove (Double Burner)</option>
+                  <option value="LPG Stove (Triple Burner)">LPG Stove (Triple Burner)</option>
+                </select>
+              </div>
+              <div>
+                <label for="orderFormName" class="block text-lg font-medium text-gray-700 mb-1">Your Name:</label>
+                <input type="text" id="orderFormName" name="orderFormName" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base" placeholder="Enter your full name" />
+              </div>
+              <div>
+                <label for="orderFormAddress" class="block text-lg font-medium text-gray-700 mb-1">Delivery Address:</label>
+                <input type="text" id="orderFormAddress" name="orderFormAddress" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base" placeholder="e.g., House No., Street, Brgy, City" />
+              </div>
+              <div>
+                <label for="orderFormContact" class="block text-lg font-medium text-gray-700 mb-1">Contact Number:</label>
+                <input type="tel" id="orderFormContact" name="orderFormContact" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base" placeholder="e.g., 09XX-XXX-XXXX" />
+              </div>
+              <div>
+                <label for="orderFormBranch" class="block text-lg font-medium text-gray-700 mb-1">Preferred Branch:</label>
+                <select id="orderFormBranch" name="orderFormBranch" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-700 focus:border-blue-700 text-base">
+                  <option value="Galas">Galas</option>
+                  <option value="Laon-Laan">Laon-Laan</option>
+                  <option value="Sampaloc">Sampaloc</option>
+                </select>
+              </div>
+              <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-md transform hover:scale-105 transition duration-300 ease-in-out ring-2 ring-red-400">Place Order</button>
+              <button type="button" id="closeOrderFormBtn" class="w-full mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-full text-lg shadow-md transform hover:scale-105 transition duration-300 ease-in-out">Cancel</button>
+            </form>
+            <p id="orderFormConfirmation" class="mt-6 text-green-600 font-semibold text-center"></p>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section - Kept consistent with other pages -->
+  <footer class="bg-blue-900 text-white p-6 text-center text-sm">
+    <p>&copy; 2025 Delma's Gaz Hauz. All rights reserved. <span class="font-bold text-orange-300">FOR EDUCATIONAL PURPOSES ONLY</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

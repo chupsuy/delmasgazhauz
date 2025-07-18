@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delma's Gaz Hauz | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Delma's Gaz Hauz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="rates.html">Rates</a></li>
+        <li class="dropdown">
+          <a href="#">Account &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Welcome to Delma's Gaz Hauz</h2>
+    <p>Your trusted partner in safe and reliable LPG products.</p>
+    <img src="https://images.unsplash.com/photo-1611905867235-3ac56e384151" alt="LPG" />
+  </section>
+
+  <section class="section contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Reach out to us!</p>
+    <div class="contact-info">
+      <p><strong>Address:</strong> 123 LPG Street, Quezon City, Metro Manila</p>
+      <p><strong>Phone:</strong> (02) 1234-5678</p>
+      <p><strong>Email:</strong> info@delmasgazhauz.com</p>
+    </div>
+    <form id="contactForm">
+      <label for="contactName">Name: <input type="text" id="contactName" name="contactName" required /></label>
+      <label for="contactEmail">Email: <input type="email" id="contactEmail" name="contactEmail" required /></label>
+      <label for="contactMessage">Message: <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea></label>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="contactMessageConfirmation"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Delma's Gaz Hauz. All rights reserved. FOR EDUCATIONAL PURPOSES ONLY</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
